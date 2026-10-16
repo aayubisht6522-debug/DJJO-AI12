@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJJO AI — Your Visual Guide</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="/" class="logo">✳ DJJO <span>AI</span></a>
+        <div class="status"><span class="dot"></span> AI Assistant</div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <p class="eyebrow">YOUR SCREEN, MADE SIMPLE</p>
+            <h1>Stuck on a screen?<br>
+                <span>Let's figure it out.</span>
+            </h1>
+            <p class="subtitle">
+                Upload a screenshot. Tell us what's confusing.
+                Get clear, step-by-step guidance.
+            </p>
+        </header>
+
+        <section class="panel">
+            <form id="analyze-form">
+                <div class="section-title">
+                    <div>
+                        <h2>Show us the problem</h2>
+                        <p>Start by uploading a screenshot.</p>
+                    </div>
+                    <span class="step">STEP 01</span>
+                </div>
+
+                <label class="upload-area" id="drop-area" for="screenshot">
+                    <input type="file" id="screenshot"
+                           accept="image/png,image/jpeg,image/webp" hidden>
+
+                    <div id="placeholder">
+                        <div class="upload-icon">↑</div>
+                        <h3>Drop your screenshot here</h3>
+                        <p>or <span>browse files</span></p>
+                        <small>PNG, JPG or WEBP · Max 5 MB</small>
+                    </div>
+
+                    <img id="preview" alt="Screenshot preview" hidden>
+                </label>
+
+                <button type="button" id="remove-image" hidden>
+                    Remove screenshot
+                </button>
+
+                <label for="problem" class="field-label">
+                    WHAT'S HAPPENING? <span>(OPTIONAL)</span>
+                </label>
+
+                <textarea id="problem" rows="3"
+                    placeholder="Example: I can't find a setting or fix an error..."></textarea>
+
+                <p class="privacy">
+                    🔒 Avoid uploading passwords or sensitive information.
+                </p>
+
+                <button class="analyze-btn" id="analyze-btn" type="submit">
+                    <span id="btn-text">✦ Analyze my screen</span>
+                </button>
+            </form>
+
+            <section id="results" hidden>
+                <div class="result-title">
+                    <span class="step">STEP 02</span>
+                    <h2>Your guidance</h2>
+                </div>
+                <div id="answer"></div>
+                <button id="reset-btn" class="reset-btn" type="button">
+                    Analyze another screenshot ↗
+                </button>
+            </section>
+        </section>
+
+        <footer>
+            <span>© DJJO AI</span>
+            <span>Understand more. Click with confidence.</span>
+        </footer>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
